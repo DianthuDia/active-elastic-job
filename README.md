@@ -35,7 +35,8 @@ You have your Rails application deployed on the [Amazon Elastic Beanstalk](http:
   * Select the _Roles_ submenu.
   * Find the role that you select as the instance profile when creating the Elastic Beanstalk web environment:
   ![Instance Profile](/docs/instance_profile.png?raw=true "Architecture Diagram")
-  * Attach the **AmazonSQSFullAccess** policy to this role.
+  * Attach the **AmazonSQSReadOnlyAccess** policy to this role.
+    * [Adding permissions to the default instance profile](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/iam-instanceprofile.html#iam-instanceprofile-addperms)
   * Make yourself familiar with [AWS Service Roles, Instance Profiles, and User Policies](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts-roles.html).
 4. Tell the gem the region of your SQS queue that you created in step 2:
   * Select the web environment that is currently hosting your application and open the _Software Configuration_ settings.
